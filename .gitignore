@@ -1,0 +1,11 @@
+*.pyc
+*.pyt
+*.pot
+env
+.vscode
+passos.txt
+.idea
+.env
+
+logs/*
+bucket_minio/*
