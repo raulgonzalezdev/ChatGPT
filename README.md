@@ -1,10 +1,10 @@
-#OpenAI Whisper and ChatGPT Gradio Web UI
+# OpenAI Whisper and ChatGPT Gradio Web UI
 
 Este proyecto combina las tecnologías Whisper y ChatGPT de OpenAI para crear una interfaz web de usuario de grado. Whisper es una biblioteca de lenguaje natural de OpenAI que permite a los desarrolladores generar texto a partir de una variedad de entradas, como audio, video, texto y más. ChatGPT es un modelo de lenguaje de OpenAI que es capaz de generar texto coherente y coherente en una variedad de tareas de lenguaje natural. Juntos, estas tecnologías permiten a los desarrolladores crear una interfaz de usuario de grado que puede transcribir audio y generar respuestas en tiempo real.
 
 ## Running the project for the first time
 
-##Requisitos previos
+## Requisitos previos
 
 - *Python 3.6 o superior*
 - *Una cuenta en OpenAI y una llave de API válida*
@@ -12,57 +12,63 @@ Este proyecto combina las tecnologías Whisper y ChatGPT de OpenAI para crear un
 
 
 
-##Instrucciones de instalación
+## Instrucciones de instalación
 
-##Creando un ambiente virtual
+## Creando un ambiente virtual
 
 Para evitar conflictos con otras librerías y tener un control más preciso de las dependencias del proyecto, es recomendable utilizar un ambiente virtual.
 
-##Windows
+### Windows
 
-Crear una virtual env: py -m venv env
-Activar la virtual env: .\env\Scripts\activate
+- *To create a virtual env* ```py -m venv env```
+- *Activating the virtual env:* ```.\env\Scripts\activate``` 
 
-##Linux
+### Linux
 
-Instalar virtualenv: pip install virtualenv
+- *Instalar virtualenv:* ```pip install virtualenv```
 
-Crear una virtual env: virtualenv env
+- It is necessary to have the library: ```pip install virtualenv```
+- *To create a virtual env* ```virtualenv env```
+- *Activating the virtual env:* ```source env/bin/activate``` 
 
-Activar la virtual env: source env/bin/activate
+## Install the necessary dependencies
+- ```pip install -r requirements.txt``` to install the necessary dependencies
 
-Instalar las dependencias necesarias: pip install -r requirements.txt
+## Solución de problemas
 
-Solución de problemas
+### Error con la librería pyaudio
 
-Error con la librería pyaudio
+``` sudo apt install build-essential portaudio19-dev python3.10-dev```
 
-sudo apt install build-essential portaudio19-dev python3.10-dev
-pip install pyaudio
+```pip install pyaudio```
 
-Error con Whisper
-pip install git+https://github.com/openai/whisper.git
+### Error con Whisper
 
-Actualizar Whisper
+```pip install git+https://github.com/openai/whisper.git```
 
-pip install --upgrade --no-deps --force-reinstall git+https://github.com/openai/whisper.git
+### Actualizar Whisper
 
-Instalar ffmpeg
-Ubuntu/Debian: sudo apt update && sudo apt install ffmpeg
-Windows: scoop install ffmpeg
+``` pip install --upgrade --no-deps --force-reinstall git+https://github.com/openai/whisper.git```
 
-Ejecutar el servidor
+### Instalar ffmpeg
 
-python ChatGpt.py
+-*Ubuntu/Debian:* ``` sudo apt update && sudo apt install ffmpeg```
 
-Abrir una ventana de navegador en http://localhost:7860
+-*Windows:* ```scoop install ffmpeg```
 
-Añadir una nueva biblioteca
-pip freeze > requirements.txt
+### Ejecutar el servidor
 
-Nota: Recuerda cambiar la contraseña del banco de datos en el archivo .env antes de ejecutar el proyecto
+```python ChatGpt.py```
 
-Reseña
+## Abrir una ventana de navegador en ```http://localhost:7860```
+
+## Añadir una nueva biblioteca al proyecto actualice 
+
+```pip freeze > requirements.txt```
+
+
+
+## Reseña
 
 ¡Acabamos de lanzar nuestro proyecto de #OpenAI! Una combinación de Whisper y ChatGPT en una interfaz web de usuario con Gradio. Genera texto a partir de audio y responde preguntas de manera natural.
 
@@ -70,3 +76,4 @@ Este proyecto combina las tecnologías Whisper de OpenAI y ChatGPT para crear un
 
 
  ¡Chequea nuestro repositorio para más detalles!
+ 
