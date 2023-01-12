@@ -1,57 +1,72 @@
-# Translate Whiseper with ChatGPT
+#OpenAI Whisper and ChatGPT Gradio Web UI
 
-## Ao rodar o projeto pela primeira vez
-### No Windows
-- *Para criar uma virtual env* ```py -m venv env```
-- *Ativando a virtual env:* ```.\env\Scripts\activate``` 
-### No Linux
-- É necessário ter a biblioteca: ```pip install virtualenv```
-- *Para criar uma virtual env* ```virtualenv env```
-- *Ativando a virtual env:* ```source env/bin/activate``` 
+Este proyecto combina las tecnologías Whisper y ChatGPT de OpenAI para crear una interfaz web de usuario de grado. Whisper es una biblioteca de lenguaje natural de OpenAI que permite a los desarrolladores generar texto a partir de una variedad de entradas, como audio, video, texto y más. ChatGPT es un modelo de lenguaje de OpenAI que es capaz de generar texto coherente y coherente en una variedad de tareas de lenguaje natural. Juntos, estas tecnologías permiten a los desarrolladores crear una interfaz de usuario de grado que puede transcribir audio y generar respuestas en tiempo real.
 
-----
---- 
+## Running the project for the first time
+
+##Requisitos previos
+
+- *Python 3.6 o superior*
+- *Una cuenta en OpenAI y una llave de API válida*
+- *ffmpeg instalado en su sistema*
 
 
 
-- ```pip install -r requirements.txt```   para instalar as dependências necessárias
+##Instrucciones de instalación
+
+##Creando un ambiente virtual
+
+Para evitar conflictos con otras librerías y tener un control más preciso de las dependencias del proyecto, es recomendable utilizar un ambiente virtual.
+
+##Windows
+
+Crear una virtual env: py -m venv env
+Activar la virtual env: .\env\Scripts\activate
+
+##Linux
+
+Instalar virtualenv: pip install virtualenv
+
+Crear una virtual env: virtualenv env
+
+Activar la virtual env: source env/bin/activate
+
+Instalar las dependencias necesarias: pip install -r requirements.txt
+
+Solución de problemas
+
+Error con la librería pyaudio
+
+sudo apt install build-essential portaudio19-dev python3.10-dev
+pip install pyaudio
+
+Error con Whisper
+pip install git+https://github.com/openai/whisper.git
+
+Actualizar Whisper
+
+pip install --upgrade --no-deps --force-reinstall git+https://github.com/openai/whisper.git
+
+Instalar ffmpeg
+Ubuntu/Debian: sudo apt update && sudo apt install ffmpeg
+Windows: scoop install ffmpeg
+
+Ejecutar el servidor
+
+python ChatGpt.py
+
+Abrir una ventana de navegador en http://localhost:7860
+
+Añadir una nueva biblioteca
+pip freeze > requirements.txt
+
+Nota: Recuerda cambiar la contraseña del banco de datos en el archivo .env antes de ejecutar el proyecto
+
+Reseña
+
+¡Acabamos de lanzar nuestro proyecto de #OpenAI! Una combinación de Whisper y ChatGPT en una interfaz web de usuario con Gradio. Genera texto a partir de audio y responde preguntas de manera natural.
+
+Este proyecto combina las tecnologías Whisper de OpenAI y ChatGPT para crear una interfaz web de usuario utilizando Gradio. Whisper es una herramienta de generación de lenguaje que permite generar texto a partir de un audio de entrada. ChatGPT es un modelo de lenguaje de OpenAI que se utiliza para responder preguntas y generar texto de manera natural.
 
 
-## en caso de error con libriar pyaudio
-
-``` sudo apt install build-essential portaudio19-dev python3.10-dev ```
-```  pip install pyaudio ```
-
-## en caso de error de whipser  siga estos pasos
-
-``` pip install git+https://github.com/openai/whisper.git  ```
-
-Para actualizar el paquete a la última versión de este repositorio, ejecute:
-
-``` pip install --upgrade --no-deps --force-reinstall git+https://github.com/openai/whisper.git ```
-
-También requiere que la herramienta de línea de comandos esté instalada en su sistema, que está disponible en la mayoría de los administradores de paquetes:ffmpeg
-
-# on Ubuntu or Debian
-
-``` sudo apt update && sudo apt install ffmpeg ```
-
-# on Windows using Scoop (https://scoop.sh/)
-``` scoop install ffmpeg ```
-
-## Para rodar o banco de dados
-- no arquivo .env mudar a senha do banco para a sua senha local
-
-
-### Start no servidor
-- ```python ChatGpt.py```
-
-
- ## abra una ventana de navegador y use la app
-``` http://localhost:7860 ```
-
-# Servidor pronto para ser acessado em localhost:7860/
-
-----
-### Se preciso for incluir uma nova biblioteca no projeto, lembrar de adicionar ela a lista de bibliotecas do projeto com o comando
-- ```pip freeze > requirements.txt```
+ ¡Chequea nuestro repositorio para más detalles!
