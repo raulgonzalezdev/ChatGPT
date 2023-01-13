@@ -17,17 +17,15 @@ device = model.device
 # Secret token for the ChatGPT API
 
 
-OPENAI_API_KEY= "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"
-openai.api_key = os.getenv(OPENAI_API_KEY)
+OPENAI_API_KEY= "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"
+print(OPENAI_API_KEY)
+openai.api_key = "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"
 openai.organization ="org-ylTpDH1qTCuY7AsB5P1HDSSQ"
 openai.Model.list()
 
 
 # define the model to use
 model_engine = "text-davinci-003"
-
-
-
 
 
 # Function to transcribe audio
@@ -57,7 +55,7 @@ def transcribe(audio):
         temperature=0.5
     )
     # Send the result text to the ChatGPT API and get the response
-    
+    print(resp["choices"][0]["text"])
     out_result = resp['message']
     
     return [result_text, out_result]
