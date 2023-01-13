@@ -18,8 +18,8 @@ device = model.device
 
 
 OPENAI_API_KEY= "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"
-print(OPENAI_API_KEY)
-openai.api_key = "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"
+
+openai.api_key = OPENAI_API_KEY
 openai.organization ="org-ylTpDH1qTCuY7AsB5P1HDSSQ"
 openai.Model.list()
 
@@ -55,8 +55,8 @@ def transcribe(audio):
         temperature=0.5
     )
     # Send the result text to the ChatGPT API and get the response
-    print(resp["choices"][0]["text"])
-    out_result = resp['message']
+    print(resp)
+    out_result = resp["choices"][0]["text"]
     
     return [result_text, out_result]
 
@@ -70,4 +70,4 @@ gr.Interface(
     inputs=[gr.inputs.Audio(source="microphone", type="filepath")],
     outputs=[output_1, output_2],
     live=True
-).launch
+).launch()
