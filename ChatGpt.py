@@ -17,10 +17,10 @@ device = model.device
 # Secret token for the ChatGPT API
 
 
-OPENAI_API_KEY= "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"
+OPENAI_API_KEY= "sk-"
 
 openai.api_key = OPENAI_API_KEY
-openai.organization ="org-ylTpDH1qTCuY7AsB5P1HDSSQ"
+openai.organization ="org-"
 openai.Model.list()
 
 
